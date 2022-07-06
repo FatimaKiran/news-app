@@ -1,0 +1,106 @@
+{
+  "GET /api": {
+    "description": "serves up a json representation of all the available endpoints of the api"
+  },
+  "GET /api/topics": {
+    "description": "serves an array of all topics",
+    "queries": [],
+    "exampleResponse": {
+      "topics": [{ "slug": "football", "description": "Footie!" }]
+    }
+  },
+
+  "GET /api/articles": {
+    "description": "serves an array of all topics",
+    "queries": ["author", "topic", "sort_by", "order"],
+    "exampleResponse": {
+      "articles": [
+        {
+          "title": "Seafood substitutions are increasing",
+          "topic": "cooking",
+          "author": "weegembump",
+          "body": "Text from the article..",
+          "created_at": 1527695953341
+        }
+      ]
+    }
+  
+
+}
+,
+  "GET /api/articles/:article_id": {
+    "description": "server an object of article with :article_id",
+    "queries": ["author", "topic", "sort_by", "order"],
+    "exampleResponse": {
+      "articles": [
+        {
+          "article_id":1,
+          "title": "Seafood substitutions are increasing",
+          "topic": "cooking",
+          "author": "weegembump",
+          "body": "Text from the article..",
+          "created_at": 1527695953341
+        }
+      ]
+    }
+  },
+
+  "PATCH /api/articles/:article_id":{
+    "description": "server an object of article with requested object",
+    "requested-obj": "{ inc_votes: 1 }",
+    "exampleResponse":   {
+      "article": {
+       " article_id": "Number",
+        "title": "String",
+        "body": "String",
+        "topic": "String",
+        "author": "String",
+        "votes": "Number",
+        "created_at": "String",
+        "comment_count": "String"
+      }
+    }
+  },
+  "GET /api/articles/:article_id/comments": {
+    "description": "server an object of comment  with :article_id",
+    "exampleResponse": {
+      "comment": [
+        {
+         " body": "Oh, I've got compassion running out of my nose, pal! I'm the Sultan of Sentiment!",
+         " votes": 16,
+          "author": "butter_bridge",
+          "article_id": 9,
+          "created_at": "new Date(1586179020000)"
+        }
+      ]
+    }
+  },
+  "GET /api/users": {
+    "description": "server an array of users ",
+    "queries": ["author", "topic", "sort_by", "order"],
+    "exampleResponse": {
+      "users": [
+        {
+         " username": "butter_bridge",
+          "name": "jonny",
+         " avatar_url":"https://www.healthytherapies.com/wp-content/uploads/2016/06/Lime3.jpg"
+        }
+      ]
+    }
+  },
+  "GET /api/users/:username": {
+    "description": "server an object of user with specific object name  ",
+    "exampleResponse": {
+      "users": [
+        {
+         " username": "butter_bridge",
+          "name": "jonny",
+         " avatar_url":"https://www.healthytherapies.com/wp-content/uploads/2016/06/Lime3.jpg"
+        }
+      ]
+    }
+  }
+
+
+
+}
