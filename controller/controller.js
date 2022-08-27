@@ -23,9 +23,9 @@ exports.getArticleById = (req,res,next) =>{
 }
 
 exports.patchArticleById = (req,res,next) =>{
-    const inc_votes = req.body.inc_votes;
+    // const inc_votes = req.body.inc_votes;
     const {article_id} = req.params;
-    updateArticleById(article_id , inc_votes).then((article)=>{
+    updateArticleById(article_id , req.body).then((article)=>{
         if (article)  res.status(200).send({article}) 
         else   return Promise.reject({status: 404, msg:"not found"})
     }).catch((err)=>{
