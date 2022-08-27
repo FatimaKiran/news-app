@@ -22,13 +22,18 @@ exports.fetchArticleById = (id) =>{
     });
 }
 
-exports.updateArticleById = (id , inc_votes) =>{
+exports.updateArticleById = (id , {inc_votes = 0}) =>{
     return db.query(`UPDATE articles
     SET votes = votes + $1
     WHERE article_id = $2
-    RETURNING * ;`,[inc_votes,id]).then((res)=>{
-        return (res.rows[0]);
-    });
+    RETURNING * ;`,[inc_votes,id])
+    .then((res)=>{
+
+       return  res.rows[0]
+    })
+
+
+   
 }
 
 exports.fetchArticles = (sort_by="created_at",order="desc") =>{
