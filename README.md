@@ -2,6 +2,9 @@
 I am building an API for the purpose of accessing application data programmatically. The intention here is to mimic the building of a real world backend service (such as reddit) which should provide this information to the front end architecture.
 It was designed using the MVC framework, built using TDD and deployed to Heroku.
 
+### Hosted version 
+    https://fatima-news-app.herokuapp.com/api
+
 
 ## Requirements
 
