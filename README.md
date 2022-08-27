@@ -15,9 +15,11 @@ It was designed using the MVC framework, built using TDD and deployed to Heroku.
 
 ## Running the App
 
-if you would like to host and run the app locally:
+If you would like to host and run the app locally:
+
+
   1: Clone the repo by first navigating to the desired folder within a terminal, then entering:
-       git clone https://github.com/adamrleigh/Northcoders-News
+       git clone https://github.com/FatimaKiran/news-app.git
   
   2: Install the dependencies for the app by navigating to the root directory of the cloned repo and entering:
        npm i
