@@ -34,11 +34,16 @@ If you would like to host and run the app locally:
        
        
   4: Create and seed the databases by entering:
+  
+  
        npm run setup-dbs
        npm run seed
        
        
   OPTIONAL: Check that everything is setup correctly by entering:
+  
+  
+  
        npm t
 
 
