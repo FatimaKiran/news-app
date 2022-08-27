@@ -19,12 +19,16 @@ If you would like to host and run the app locally:
 
 
   1: Clone the repo by first navigating to the desired folder within a terminal, then entering:
+  
        git clone https://github.com/FatimaKiran/news-app.git
   
+  
   2: Install the dependencies for the app by navigating to the root directory of the cloned repo and entering:
+  
        npm i
        
-  3: Create two .env files      
+  3: Create two .env files 
+  
        You need to create `.env.test` and `.env.development` files that contains PGDATABASE=nc_news_test & PGDATABASE=nc_news respectively that is for                 setup your database.
        Double check that these `.env` files are .gitignored.
        
