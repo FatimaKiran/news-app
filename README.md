@@ -1,11 +1,16 @@
-## Background
+### Background
 I am building an API for the purpose of accessing application data programmatically. The intention here is to mimic the building of a real world backend service (such as reddit) which should provide this information to the front end architecture.
+It was designed using the MVC framework, built using TDD and deployed to Heroku.
 
 
-##  setup
+### setup
 
-For clone:
+
+## For clone:
  `git clone https://github.com/FatimaKiran/news-app.git`
+
+## Requirements
+
 
 
 .You need to create `.env.test` and `.env.development` files that contains PGDATABASE=nc_news_test & PGDATABASE=nc_news respectively that is for setup your database.
