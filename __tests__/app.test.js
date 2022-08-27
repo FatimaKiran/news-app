@@ -194,6 +194,17 @@ describe("/api/articles/:article_id",()=>{
       })
     });
 
+    test("status:200, votes do not change when not passed an inc_votes value",()=>{
+      const updatedVotes = {};
+      return request(app)
+      .patch('/api/articles/1')
+      .send(updatedVotes)
+      .expect(200)
+      .then((res)=>{
+        expect(res.body.article.votes).toBe(100)
+      })
+    });
+
 
 
 
